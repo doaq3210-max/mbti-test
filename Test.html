@@ -48,6 +48,11 @@
     <p class="quiz-intro">10개의 문항에 솔직하게 답하면, 나에게 가장 잘 맞는 공부 성향 그룹을 알려드려요. 정답은 없으니 평소 습관에 가장 가까운 항목을 골라주세요.</p>
   </section>
 
+  <div class="quiz-progress">
+    <span class="quiz-progress-text" id="quiz-progress-text">1 / 10</span>
+    <div class="quiz-progress-track"><div class="quiz-progress-fill" id="quiz-progress-fill"></div></div>
+  </div>
+
   <form id="quiz-form" class="question-list">
 
     <fieldset class="question-card" id="question-1">
@@ -152,10 +157,11 @@
 
   </form>
 
-  <div class="quiz-submit-wrap">
-    <button type="button" id="quiz-submit" class="btn btn-primary">결과 확인하기</button>
-    <p id="quiz-error"></p>
+  <div class="quiz-nav">
+    <button type="button" id="quiz-prev" class="btn btn-outline" disabled>이전 문항</button>
+    <button type="button" id="quiz-submit" class="btn btn-primary" style="display:none;">결과 확인하기</button>
   </div>
+  <p id="quiz-error"></p>
 
   <div class="result-box" id="result-box">
     <div class="emoji" id="result-emoji"></div>

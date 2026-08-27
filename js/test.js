@@ -30,6 +30,23 @@ const GROUP_INFO = {
 };
 
 const TOTAL_QUESTIONS = 10;
+let currentQuestion = 1;
+
+function showQuestion(n) {
+  currentQuestion = n;
+  document.querySelectorAll('.question-card').forEach((card) => {
+    card.classList.toggle('active', card.id === `question-${n}`);
+  });
+  document.getElementById('quiz-progress-text').textContent = `${n} / ${TOTAL_QUESTIONS}`;
+  document.getElementById('quiz-progress-fill').style.width = `${(n / TOTAL_QUESTIONS) * 100}%`;
+  document.getElementById('quiz-prev').disabled = n === 1;
+  document.getElementById('quiz-submit').style.display = n === TOTAL_QUESTIONS ? 'inline-block' : 'none';
+  document.getElementById('quiz-error').textContent = '';
+}
+
+function goToPrevQuestion() {
+  if (currentQuestion > 1) showQuestion(currentQuestion - 1);
+}
 
 function highlightOptions() {
   document.querySelectorAll('.option-item').forEach((item) => {
@@ -39,6 +56,11 @@ function highlightOptions() {
       document.querySelectorAll(`input[name="${name}"]`).forEach((el) => {
         el.closest('.option-item').classList.toggle('checked', el.checked);
       });
+    });
+    input.addEventListener('click', () => {
+      const qIndex = Number(input.name.slice(1));
+      if (qIndex !== currentQuestion || qIndex >= TOTAL_QUESTIONS) return;
+      setTimeout(() => showQuestion(qIndex + 1), 250);
     });
   });
 }
@@ -51,7 +73,7 @@ function calculateResult() {
     const checked = document.querySelector(`input[name="q${i}"]:checked`);
     if (!checked) {
       errorEl.textContent = `${i}번 문항에 답해주세요.`;
-      document.getElementById(`question-${i}`).scrollIntoView({ behavior: 'smooth', block: 'center' });
+      showQuestion(i);
       return;
     }
     scores[checked.value] += 1;
@@ -123,6 +145,8 @@ async function shareResult() {
 
 document.addEventListener('DOMContentLoaded', () => {
   highlightOptions();
+  showQuestion(1);
+  document.getElementById('quiz-prev').addEventListener('click', goToPrevQuestion);
   document.getElementById('quiz-submit').addEventListener('click', calculateResult);
   document.getElementById('share-btn').addEventListener('click', shareResult);
 });
