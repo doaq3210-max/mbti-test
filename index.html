@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MBTI 공부법 연구소 | 나에게 맞는 공부법 찾기</title>
 <meta name="description" content="MBTI 성향 그룹별 맞춤 공부법과 시험 꿀팁을 소개하는 MBTI 공부법 연구소입니다.">
+<script>
+(function(){var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();
+</script>
+<link rel="stylesheet" href="css/theme.css">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -18,6 +22,7 @@
       <a href="SJ.html">SJ</a>
       <a href="SP.html">SP</a>
       <a href="Test.html" class="nav-cta">자가진단</a>
+      <button type="button" id="theme-toggle" class="theme-toggle" aria-label="다크 모드로 전환">🌙</button>
     </nav>
   </div>
 </header>
@@ -34,25 +39,25 @@
     <p class="section-sub">MBTI 16유형을 4개의 공부 성향 그룹으로 나누어 살펴봅니다.</p>
 
     <div class="card-grid">
-      <div class="group-card" style="--accent:#4C3BCF">
+      <div class="group-card" style="--accent:#2F5CD1">
         <div class="emoji">🧠</div>
         <h3>NT · 분석가형</h3>
         <p>INTJ · INTP · ENTJ · ENTP<br>논리와 원리로 파고드는 학습형</p>
         <a href="NT.html" class="card-link">NT 공부법 보기 →</a>
       </div>
-      <div class="group-card" style="--accent:#9B5CF0">
+      <div class="group-card" style="--accent:#C9512F">
         <div class="emoji">🌱</div>
         <h3>NF · 외교관형</h3>
         <p>INFJ · INFP · ENFJ · ENFP<br>의미와 이야기로 기억하는 학습형</p>
         <a href="NF.html" class="card-link">NF 공부법 보기 →</a>
       </div>
-      <div class="group-card" style="--accent:#7C4DFF">
+      <div class="group-card" style="--accent:#0E8A72">
         <div class="emoji">📋</div>
         <h3>SJ · 관리자형</h3>
         <p>ISTJ · ISFJ · ESTJ · ESFJ<br>계획과 반복으로 완성하는 학습형</p>
         <a href="SJ.html" class="card-link">SJ 공부법 보기 →</a>
       </div>
-      <div class="group-card" style="--accent:#C147E9">
+      <div class="group-card" style="--accent:#B8790A">
         <div class="emoji">🎯</div>
         <h3>SP · 탐험가형</h3>
         <p>ISTP · ISFP · ESTP · ESFP<br>실전과 체험으로 익히는 학습형</p>
@@ -80,5 +85,6 @@
   <p>&copy; 2026 MBTI 공부법 연구소. 모든 콘텐츠는 참고용이며 학습 효과를 보장하지 않습니다.</p>
 </footer>
 
+<script src="js/theme.js"></script>
 </body>
 </html>

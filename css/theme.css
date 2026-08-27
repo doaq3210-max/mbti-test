@@ -1,0 +1,58 @@
+/* Design tokens — light theme (default) and dark theme, bp.com 참고 */
+:root {
+  --bg: #F7F5EC;
+  --surface: #FFFFFF;
+  --surface-soft: #F1F2E9;
+  --border: #E7E3D3;
+  --ink: #16150F;
+  --ink-soft: #59564B;
+
+  --primary: #007F00;
+  --on-primary: #FFFFFF;
+  --primary-hover: #045C0B;
+  --primary-soft: #E3F3E3;
+
+  --nt: #2F5CD1;
+  --nf: #C9512F;
+  --sj: #0E8A72;
+  --sp: #B8790A;
+
+  --radius: 16px;
+  --shadow: 0 1px 2px rgba(22, 21, 15, 0.04), 0 10px 24px rgba(22, 21, 15, 0.06);
+}
+
+:root[data-theme="dark"] {
+  --bg: #10190F;
+  --surface: #1B271A;
+  --surface-soft: #203222;
+  --border: #2B3D2B;
+  --ink: #EDEFE4;
+  --ink-soft: #ABB4A0;
+
+  --primary: #4ADE80;
+  --on-primary: #0B1A0E;
+  --primary-hover: #7CEBA3;
+  --primary-soft: #1E3524;
+
+  --shadow: 0 1px 0 rgba(255, 255, 255, 0.03), 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+body {
+  transition: background-color .2s ease, color .2s ease;
+}
+
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.theme-toggle:hover { background: var(--surface-soft); }

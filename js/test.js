@@ -4,28 +4,28 @@ const GROUP_INFO = {
     emoji: '🧠',
     desc: '논리와 원리를 파고드는 당신에게는 개념을 체계화하고 스스로 답을 찾아가는 공부법이 잘 맞아요.',
     page: 'NT.html',
-    color: '#4C3BCF'
+    color: '#2F5CD1'
   },
   NF: {
     name: 'NF · 외교관형',
     emoji: '🌱',
     desc: '의미와 스토리에 몰입하는 당신에게는 이야기와 감정을 담아 기억하는 공부법이 잘 맞아요.',
     page: 'NF.html',
-    color: '#9B5CF0'
+    color: '#C9512F'
   },
   SJ: {
     name: 'SJ · 관리자형',
     emoji: '📋',
     desc: '계획과 반복에 강한 당신에게는 루틴을 세우고 꾸준히 실천하는 공부법이 잘 맞아요.',
     page: 'SJ.html',
-    color: '#7C4DFF'
+    color: '#0E8A72'
   },
   SP: {
     name: 'SP · 탐험가형',
     emoji: '🎯',
     desc: '몸으로 부딪히며 배우는 당신에게는 실전 문제와 짧은 집중 스퍼트 공부법이 잘 맞아요.',
     page: 'SP.html',
-    color: '#C147E9'
+    color: '#B8790A'
   }
 };
 
