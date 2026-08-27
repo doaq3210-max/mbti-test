@@ -1,0 +1,107 @@
+.quiz-intro {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 40px;
+  color: var(--ink-soft);
+}
+
+.question-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.question-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 22px 24px;
+}
+
+.question-card p.q-text {
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.q-number {
+  display: inline-block;
+  background: var(--purple-light);
+  color: var(--purple-dark);
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+
+.option-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.option-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--cream-soft);
+  cursor: pointer;
+  transition: background .12s ease, border-color .12s ease;
+}
+
+.option-item:hover { background: var(--purple-pale); }
+
+.option-item input { accent-color: var(--purple); width: 16px; height: 16px; }
+
+.option-item.checked {
+  background: var(--purple-pale);
+  border-color: var(--purple);
+}
+
+.quiz-submit-wrap {
+  text-align: center;
+  margin: 32px 0 8px;
+}
+
+#quiz-error {
+  color: #C0392B;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  min-height: 1.2em;
+}
+
+.result-box {
+  display: none;
+  max-width: 640px;
+  margin: 40px auto 0;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 36px 28px;
+  text-align: center;
+  border-top: 6px solid var(--purple);
+}
+
+.result-box.show { display: block; }
+
+.result-box .emoji { font-size: 2.8rem; margin-bottom: 10px; }
+.result-box h2 { color: var(--purple-dark); margin-bottom: 10px; }
+.result-box p { color: var(--ink-soft); margin-bottom: 24px; }
+
+.result-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.result-score {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin-top: 20px;
+}
