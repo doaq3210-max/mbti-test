@@ -53,7 +53,7 @@ img { max-width: 100%; display: block; }
   flex-wrap: wrap;
 }
 
-.main-nav a { font-weight: 600; color: var(--ink-soft); font-size: 0.95rem; }
+.main-nav a { display: inline-block; padding: 12px 6px; font-weight: 600; color: var(--ink-soft); font-size: 0.95rem; }
 .main-nav a:hover { color: var(--primary); }
 
 .nav-cta {
@@ -185,6 +185,7 @@ img { max-width: 100%; display: block; }
   border-top: 1px solid var(--border);
 }
 .site-footer nav { margin-bottom: 10px; display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+.site-footer nav a { display: inline-block; padding: 10px 6px; }
 
 /* Responsive */
 @media (max-width: 860px) {
