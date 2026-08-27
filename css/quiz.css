@@ -18,9 +18,18 @@
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: 22px 24px;
+  border: none;
+  margin: 0;
+  min-width: 0;
 }
 
-.question-card p.q-text {
+.question-card legend {
+  padding: 0;
+  width: 100%;
+}
+
+.q-text {
+  display: block;
   font-weight: 700;
   margin-bottom: 14px;
 }
