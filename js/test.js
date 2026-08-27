@@ -89,6 +89,10 @@ function showResult(groupKey, scores) {
   box.dataset.group = groupKey;
   box.classList.add('show');
   box.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  if (typeof gtag === 'function') {
+    gtag('event', 'test_complete', { group: groupKey.toLowerCase() });
+  }
 }
 
 async function shareResult() {
